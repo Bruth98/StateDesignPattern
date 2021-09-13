@@ -1,3 +1,6 @@
+/*
+Create an interface for all possible states of the TV
+*/
 public interface State {
     public void pressHomeButton();
     public void pressNetflixButton();
