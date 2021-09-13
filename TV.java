@@ -5,7 +5,7 @@ public class TV {
 
     private State state;
 
-    // Construct TV
+    // Construct TV and load in all possible states
     public TV() {
         homeState = new HomeState(this);
         netflixState = new NetflixState(this);
@@ -13,22 +13,37 @@ public class TV {
         state = homeState;
     }
 
+    /*
+    Changing the state to home if not already
+    */
     public void pressHomeButton() {
         state.pressHomeButton();
     }
 
+    /*
+    Changing the state to Netflix if not already
+    */
     public void pressNetflixButton() {
         state.pressNetflixButton();
     }
 
+    /*
+    Changing the state to Hulu if not already\
+    */
     public void pressHuluButton() {
         state.pressHuluButton();
     }
-
+    
+    /*
+    Displays the app's list of movies if possible
+    */
     public void pressMovieButton() {
         state.pressMovieButton();
     }
 
+    /*
+    Displays the app's list of tv shows if possible
+    */
     public void pressTVButton() {
         state.pressTVButton();
     }
